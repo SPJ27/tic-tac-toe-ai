@@ -106,7 +106,9 @@ while True:
     print(f"{globals()[f'player_{current_turn}']}'s turn!")
     if current_turn == 0:
         choice = int(input('Enter the position no: '))
-        
+        if choice == 0 or choice > 9:
+            print('Please enter a valid number from the board!')
+            continue
         row = (9 - choice) // 3
         col = (choice  - 1) % 3
         if board[row][col] == 'X' or board[row][col] == 'O':
@@ -132,3 +134,4 @@ while True:
         break
 
 input('Press enter to exit...')
+
