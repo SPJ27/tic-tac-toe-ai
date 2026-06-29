@@ -130,3 +130,5 @@ while True:
     if full:
         print('Draw')
         break
+
+input('Press enter to exit...')
